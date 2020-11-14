@@ -1,0 +1,25 @@
+@import "./mixin";
+
+// 내비게이션
+.navigation{
+  &__menu-list{
+    font-size: 1.5rem;
+    width: 1156px;
+    margin: 40px auto;
+    @include flexbox($ma:space-between);
+  }
+  li{
+    margin-top: 7px;
+  }
+
+  &__menu-item{
+    > a{
+      font-size: 2rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 15px;
+    }
+    
+  }
+  
+}
