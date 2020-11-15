@@ -1,5 +1,16 @@
 @import "./mixin";
 
+// 음료 애니메이션
+@keyframes bounce {
+  from{
+    transform: translateY(-5px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+}
+
 // 시즌 컨테이너
 .season-container{
   background-color: $season-bg-color;
@@ -52,10 +63,27 @@
   }
 
   // 음료 이미지
-  &__beverage-list{
+  &__beverage-item{
     position: absolute;
-    right: 0;
-    top: 0;
+    animation: bounce 0.5s alternate ease-in-out infinite;
+    &:nth-child(1){
+      top: 113px;
+      left: 481px;
+      //animation-delay: 50ms;
+    }
+    &:nth-child(2){
+      top: 62px;
+      left: 709px;
+      animation-delay: 200ms;
+      //animation: bounce 1s alternate infinite;
+
+    }
+    &:nth-child(3){
+      top: 188px;
+      left: 999px;
+      animation-delay: 400ms;
+      //animation: bounce 0.1s ease-in-out infinite;
+    }
   }
 
   // 음료 정보 자세히보기 링크
@@ -66,5 +94,6 @@
     color: $season-text-color2;
     padding: 10px 25px;
     border: 1px solid currentColor;
+    margin-top: 40px;
   }
 }
