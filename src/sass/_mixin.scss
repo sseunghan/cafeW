@@ -20,3 +20,9 @@
   width: $sw;
   height: $sh;
 }
+
+// 시즌
+@mixin seasonBar($fs:4rem, $tt:uppercase){
+  font-size: $fs;
+  text-transform: $tt;
+}
